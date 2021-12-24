@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Album ID</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>URL</th>
+                        <th>Thumbnail</th>
+                        <!-- <th>Company Name</th> -->
+                    </tr>
+                </thead>
+                <tbody *ngIf="news.length != 0">
+                    <tr *ngFor="let new of news">
+                        <td>{{new.albumId}}</td>
+                        <td>{{new.id}}</td>
+                        <td>{{new.title}}</td>
+                        <td><img src="{{new.url}}" alt="" width="200px"></td>
+                        <td><img src="{{new.thumbnailUrl}}" alt=""></td>
+                        <!-- <td>{{new.company.name}}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
